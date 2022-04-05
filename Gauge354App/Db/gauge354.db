@@ -1,0 +1,111 @@
+
+record(ai,"$(P)$(M)readpressure")
+	{
+		field(DESC,"read Pressure")
+		field(DTYP,"stream")
+		field(INP,"@gauge354.proto readpressure $(PORT)")
+		field(EGU,"Torr")
+		field(PREC,"2")
+		field(SCAN,"1 second")
+	}
+	
+#record(mbbo, "$(P)$(M)setaddroffset")
+#	{
+#		field(DTYP,"stream")
+#		field(OUT,"@gauge354.proto setaddroffset $(PORT)")
+#		field(ZRVL, "00")
+#		field(ONVL, "01")
+#		field(TWVL, "02")
+#		field(THVL, "08")
+#		field(FRVL, "20")
+#		field(SCAN, "1 second")
+#	}
+	
+	
+record(bo,"$(P)$(M)setigonoff")
+	{
+		field(DTYP,"stream")
+		field(OUT,"@gauge354.proto setigonoff $(PORT)")
+		field(ZNAM,"OFF")
+		field(ONAM,"ON")
+	}
+
+record (bi, "$(P)$(M)getigonoff")
+    { 
+		field(DTYP, "stream")
+		field(INP, "@gauge354.proto getigonoff($(P)$(M)setigonoff) $(PORT)")
+		field(ZNAM, "OFF")
+		field(ONAM, "ON")
+		field(SCAN,"1 second")
+    }
+	
+record(bo,"$(P)$(M)setdegasonoff")
+	{
+		field(DTYP,"stream")
+		field(OUT,"@gauge354.proto setdegasonoff $(PORT)")
+		field(ZNAM,"OFF")
+		field(ONAM,"ON")
+	}	
+
+record (bi, "$(P)$(M)getdegasstatus")
+    { 
+		field(DTYP, "stream")
+		field(INP, "@gauge354.proto getdegasstatus($(P)$(M)setdegasonoff) $(PORT)")
+		field(ZNAM, "OFF")
+		field(ONAM, "ON")
+		field(SCAN,"1 second")
+    }
+	
+record(bo,"$(P)$(M)setemissioncurrent")
+	{
+		field(DTYP,"stream")
+		field(OUT,"@gauge354.proto setemissioncurrent $(PORT)")
+		field(ZNAM,"100uA")
+		field(ONAM,"4mA")
+	}	
+
+record(bi,"$(P)$(M)getemiscurstatus")
+	{
+		field(DTYP,"stream")
+		field(INP,"@gauge354.proto getemiscurstatus $(PORT)")
+		field(ZNAM,"0.1MA EM")
+		field(ONAM,"4.0MA EM")
+	}
+
+	
+record(bo,"$(P)$(M)setfilament")
+	{
+		field(DTYP,"stream")
+		field(OUT,"@gauge354.proto setfilament $(PORT)")
+		field(ZNAM,"1")
+		field(ONAM,"2")
+	}
+	
+record(ao,"$(P)$(M)setoverpressetpoint")
+	{
+		field(DESC,"overpressuresetpoint")
+		field(DTYP,"stream")
+		field(OUT,"@gauge354.proto setoverpressetpoint $(PORT)")
+		field(EGU, "Torr")
+		field(PREC,"2")
+		field(SCAN,"1 second")
+	}
+	
+record(mbbi, "$(P)$(M)getigmodulestatus")
+	{
+		field(DTYP,"stream")
+		field(INP,"@gauge354.proto getigmodulestatus $(PORT)")
+		field(ZRST, "00 ST OK")
+		field(ONST, "01 OVPRS")
+		field(TWST, "02 EMISS")
+		field(THST, "08 POWER")
+		field(FRST, "20 ION C")
+		field(SCAN, "1 second")
+	}
+	
+	
+	
+	
+	
+	
+	
