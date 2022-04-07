@@ -56,8 +56,8 @@ record(bi,"$(P)$(M)getemiscurstatus")
 	{
 		field(DTYP,"stream")
 		field(INP,"@gauge354.proto getemiscurstatus $(PORT)")
-		field(ZNAM,"0.1")
-		field(ONAM,"4.0")
+		field(ZNAM,"0.1MA EM")
+		field(ONAM,"4.0MA EM")
 		field(SCAN, "1 second")
 	}
 
