@@ -58,7 +58,7 @@ record(bi,"$(P)$(M)getemiscurstatus")
 		field(INP,"@gauge354.proto getemiscurstatus $(PORT)")
 		field(ZNAM,"0.1MA EM")
 		field(ONAM,"4.0MA EM")
-		field(SCAN, "1 second")
+		field(SCAN, ".5 second")
 	}
 
 	
@@ -91,10 +91,3 @@ record(mbbi, "$(P)$(M)getigmodulestatus")
 		field(FRST, "20 ION C")
 		field(SCAN, "1 second")
 	}
-	
-	
-	
-	
-	
-	
-	
