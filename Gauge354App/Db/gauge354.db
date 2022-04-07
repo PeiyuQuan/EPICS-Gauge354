@@ -9,18 +9,6 @@ record(ai,"$(P)$(M)readpressure")
 		field(SCAN,"1 second")
 	}
 	
-#record(mbbo, "$(P)$(M)setaddroffset")
-#	{
-#		field(DTYP,"stream")
-#		field(OUT,"@gauge354.proto setaddroffset $(PORT)")
-#		field(ZRVL, "00")
-#		field(ONVL, "01")
-#		field(TWVL, "02")
-#		field(THVL, "08")
-#		field(FRVL, "20")
-#		field(SCAN, "1 second")
-#	}
-	
 	
 record(bo,"$(P)$(M)setigonoff")
 	{
@@ -68,8 +56,9 @@ record(bi,"$(P)$(M)getemiscurstatus")
 	{
 		field(DTYP,"stream")
 		field(INP,"@gauge354.proto getemiscurstatus $(PORT)")
-		field(ZNAM,"0.1MA EM")
-		field(ONAM,"4.0MA EM")
+		field(ZNAM,"0.1")
+		field(ONAM,"4.0")
+		field(SCAN, "1 second")
 	}
 
 	
