@@ -16,7 +16,7 @@ epicsEnvSet ("PREFIX", "SLAC:Gauge354:")
 epicsEnvSet ("PORT", "serial1")
 epicsEnvSet ("M", "m1:")
 
-drvAsynIPPortConfigure("serial1", "192.168.0.30:4005<192.168.0.30:4006/> COM", 0, 0, 0)
+drvAsynIPPortConfigure("serial1", "192.168.0.30:4005<192.168.0.30:4005/> COM", 0, 0, 0)
 asynOctetSetInputEos("serial1",0,"\r")
 asynOctetSetOutputEos("serial1",0,"\r")
 asynSetOption("serial1",0,"baud","19200")
