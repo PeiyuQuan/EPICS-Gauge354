@@ -22,8 +22,8 @@ record (bi, "$(P)$(M)getigonoff")
     { 
 		field(DTYP, "stream")
 		field(INP, "@gauge354.proto getigonoff $(PORT)")
-		field(ZNAM, "OFF")
-		field(ONAM, "ON ")
+		field(ZNAM, "0 IG OFF")
+		field(ONAM, "1 IG ON ")
 		field(SCAN,"1 second")
     }
 	
@@ -39,8 +39,8 @@ record (bi, "$(P)$(M)getdegasstatus")
     { 
 		field(DTYP, "stream")
 		field(INP, "@gauge354.proto getdegasstatus $(PORT)")
-		field(ZNAM, "OFF")
-		field(ONAM, "ON ")
+		field(ZNAM, "0 DG OFF")
+		field(ONAM, "1 DG ON ")
 		field(SCAN,"1 second")
     }
 	
