@@ -5,7 +5,7 @@ record(ai,"$(P)$(M)readpressure")
 		field(DTYP,"stream")
 		field(INP,"@gauge354.proto readpressure $(PORT)")
 		field(EGU,"Torr")
-		field(PREC,"2")
+		field(PREC,"9")
 		field(SCAN,"1 second")
 	}
 	
