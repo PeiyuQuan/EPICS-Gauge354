@@ -5,8 +5,8 @@ setdegasonoff {out "#01DG%d"; in "*01 PROGM OK";}
 setemissioncurrent {out "#01SE%d"; in "*01 PROGM OK";}
 setfilament {out "#01SF%d"; in "*01 PROGM OK";}
 setoverpressetpoint {out"#01SO%3.2E"; in "*01 PROGM OK";}
-getigonoff {out "#01IGS"; in"*01 %{0 IG OFF|1 IG ON }";}
-getdegasstatus {out "#01DGS"; in"*01 %{0 DG OFF|1 DG ON }";}
+getigonoff {out "#01IGS"; in"*01 %d IG %s";}
+getdegasstatus {out "#01DGS"; in"*01 %d DG %s";}
 getemiscurstatus {out "#01SES"; in"*01 %{0.1MA EM|4.0MA EM}";}
 getigmodulestatus {out "#01RS"; in "*01 %{00 ST OK|01 OVPRS|02 EMISS|08 POWER|20 ION C}";}
 
