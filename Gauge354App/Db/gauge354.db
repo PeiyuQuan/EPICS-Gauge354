@@ -77,7 +77,6 @@ record(ao,"$(P)$(M)setoverpressetpoint")
 		field(OUT,"@gauge354.proto setoverpressetpoint $(PORT)")
 		field(EGU, "Torr")
 		field(PREC,"2")
-		field(SCAN,"1 second")
 	}
 	
 record(mbbi, "$(P)$(M)getigmodulestatus")
