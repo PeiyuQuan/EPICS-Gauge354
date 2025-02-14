@@ -1,2 +1,2 @@
 # EPICS-Gauge354
-KJLC 354 Series Ion gauge
+An epics driver for KJLC 354 Series Ion gauge
