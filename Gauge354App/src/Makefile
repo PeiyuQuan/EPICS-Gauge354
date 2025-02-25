@@ -55,7 +55,6 @@ Gauge354_DBD += drvAsynSerialPort.dbd
 Gauge354_DBD += calc.dbd
 Gauge354_DBD += stream-scalcout.dbd
 Gauge354_DBD += stream.dbd
-Gauge354_DBD += as.dbd
 Gauge354_DBD += asSupport.dbd
 # Gauge354_registerRecordDeviceDriver.cpp derives from Gauge354.dbd
 Gauge354_SRCS += Gauge354_registerRecordDeviceDriver.cpp
